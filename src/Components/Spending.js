@@ -18,14 +18,15 @@ const Spending = () => {
       <div className="chart-container">
         {data.map(({ id, day, amount }) => {
           return (
-            <div className="bar">
+            <div className="bar" key={id}>
               <div
-                className={`detail ${isHovering ? "hidden" : "visible"}`}
+                className={`detail`}
+                id={`${isHovering ? `hidden${id}` : `visible${id}`}`}
               >
                 ${amount}
               </div>
               <div
-                key={id}
+               
                 className={`bars bar-${id}`}
                 onMouseEnter={handleMouseEnter}
                 onMouseLeave={handleMouseLeave}
@@ -52,5 +53,6 @@ const Spending = () => {
     </div>
   );
 };
+
 
 export default Spending;
