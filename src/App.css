@@ -1,5 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;700&display=swap");
 
+/* Whole page styling  */
+
 * {
   box-sizing: border-box;
   margin: 0;
@@ -12,7 +14,10 @@
   width: 375px;
   height: 667px;
   margin: auto;
+  background-color: #f8e9dd;
 }
+
+/* Balance Container Styling  */
 
 .balance-container {
   position: absolute;
@@ -28,17 +33,18 @@
 }
 
 .balance {
+  margin-left: 20px;
   color: white;
 }
 
-.balance:first-child {
+.balance p {
   font-style: normal;
   font-weight: 400;
   font-size: 15px;
   line-height: 20px;
 }
 
-.balance  {
+.balance h3 {
   font-style: normal;
   font-weight: 700;
   font-size: 24px;
@@ -48,4 +54,35 @@
 .balance-container img {
   width: 60px;
   height: 40px;
+  margin-right: 24px;
+}
+
+/* Spending Container Styling  */
+
+.spending-container {
+  position: absolute;
+  width: 343px;
+  height: 421px;
+  left: 16px;
+  top: 180px;
+  background-color: hsl(33, 100%, 98%);
+  border-radius: 10px;
+}
+
+.spending-container h1 {
+  position: absolute;
+  width: 263px;
+  height: 31px;
+  left: calc(50% - 263px / 2 - 20px);
+  top: calc(50% - 31px / 2 - 171px);
+
+  font-family: "DM Sans";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 31px;
+
+  /* Dark Brown */
+
+  color: #382314;
 }
