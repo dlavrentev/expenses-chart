@@ -12,7 +12,7 @@
 .App {
   position: relative;
   width: 375px;
-  height: 667px;
+  height: 100vh;
   margin: auto;
   background-color: #f8e9dd;
 }
@@ -57,7 +57,10 @@
   margin-right: 24px;
 }
 
-/* Spending Container Styling  */
+
+
+
+/* -----------------------Spending Container Styling ------------------------------------------ */
 
 .spending-container {
   position: absolute;
@@ -75,8 +78,6 @@
   height: 31px;
   left: calc(50% - 263px / 2 - 20px);
   top: calc(50% - 31px / 2 - 171px);
-  font-family: "DM Sans";
-  font-style: normal;
   font-weight: 700;
   font-size: 24px;
   line-height: 31px;
@@ -98,15 +99,13 @@
 
 .bar div {
   width: 33px;
-  height: 85%;
+  height: 50%;
   border-radius: 3px;
   background: #ec755d;
 }
 
 .bar p {
   color: #92857a;
-  font-family: "DM Sans";
-  font-style: normal;
   font-weight: 400;
   font-size: 12px;
   line-height: 16px;
@@ -152,8 +151,6 @@
   height: 39px;
   left: calc(50% - 115px / 2 - 94px);
   top: calc(50% - 39px / 2 + 12px);
-  font-family: "DM Sans";
-  font-style: normal;
   font-weight: 700;
   font-size: 30px;
   line-height: 39px;
@@ -166,8 +163,6 @@
   height: 20px;
   left: 260px;
   top: 22px;
-  font-family: "DM Sans";
-  font-style: normal;
   font-weight: 700;
   font-size: 15px;
   line-height: 20px;
@@ -181,8 +176,6 @@
   height: 20px;
   left: 193px;
   top: 45px;
-  font-family: "DM Sans";
-  font-style: normal;
   font-weight: 400;
   font-size: 15px;
   line-height: 20px;
