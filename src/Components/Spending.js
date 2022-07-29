@@ -1,25 +1,26 @@
 import React from "react";
-import data from "./../Data/data.js";
+import data from './../Data/data.json'
 
 const Spending = () => {
+
+
+
   return (
     <div className="spending-container">
       <h1>Spending - Last 7 days</h1>
       <div className="details-container">
-        <div>$31.07</div>
-        <div>$31.07</div>
-        <div>$31.07</div>
-        <div>$31.07</div>
-        <div>$31.07</div>
-        <div>$31.07</div>
-        <div>$31.07</div>
+      {data.map(({amount}) => {
+          return (
+            <div>${amount}</div>
+          );
+        })}
       </div>
       <div className="chart-container">
-        {data.map((data) => {
+        {data.map(({id, day}) => {
           return (
-            <div className="bar">
-              <div>&{data[0].amount}</div>
-              <p>mon</p>
+            <div key={id} className="bar">
+              <div></div>
+              <p>{day}</p>
             </div>
           );
         })}
@@ -38,5 +39,7 @@ const Spending = () => {
     </div>
   );
 };
+
+console.log(data.amount);
 
 export default Spending;
