@@ -83,6 +83,36 @@
   color: #382314;
 }
 
+/* Chart container */
+
+.chart-container {
+  position: absolute;
+  left: 5.83%;
+  right: 5.83%;
+  top: 25.42%;
+  bottom: 32.54%;
+  display: grid;
+  grid-template-columns: repeat(7, auto);
+  justify-content: space-between;
+}
+
+.bar div {
+  width: 33px;
+  height: 85%;
+  border-radius: 3px;
+  background: #ec755d;
+}
+
+.bar p {
+  color: #92857a;
+  font-family: "DM Sans";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 16px;
+  text-align: center;
+  margin-top: 11px;
+}
 .line {
   position: absolute;
   left: 5.83%;
@@ -159,4 +189,3 @@
   text-align: right;
   color: #92857a;
 }
-
