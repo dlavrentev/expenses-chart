@@ -92,14 +92,14 @@
   right: 5.83%;
   top: 25.42%;
   bottom: 32.54%;
-  display: grid;
-  grid-template-columns: repeat(7, auto);
+  display: flex;
   justify-content: space-between;
+  align-items: flex-end;
 }
 
 .bar div {
   width: 33px;
-  height: 50%;
+  height: 150px;
   border-radius: 3px;
   background: #ec755d;
 }
