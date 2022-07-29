@@ -57,9 +57,6 @@
   margin-right: 24px;
 }
 
-
-
-
 /* -----------------------Spending Container Styling ------------------------------------------ */
 
 .spending-container {
@@ -84,7 +81,26 @@
   color: #382314;
 }
 
-/* Chart container */
+.details-container {
+  position: absolute;
+  left: 4%;
+  right: 4%;
+  top: 70px;
+  bottom: 320px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.details-container div {
+  font-size: 12px;
+  background: #382314;
+  border-radius: 5px;
+  color: white;
+  padding: 8px 5px;
+}
+
+/* Chart container */ 
 
 .chart-container {
   position: absolute;
@@ -102,6 +118,10 @@
   height: 150px;
   border-radius: 3px;
   background: #ec755d;
+}
+
+.bar div:hover {
+  background: #FF9B86;
 }
 
 .bar p {

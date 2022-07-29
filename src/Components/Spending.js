@@ -1,38 +1,28 @@
 import React from "react";
+import data from "./../Data/data.js";
 
 const Spending = () => {
   return (
     <div className="spending-container">
       <h1>Spending - Last 7 days</h1>
+      <div className="details-container">
+        <div>$31.07</div>
+        <div>$31.07</div>
+        <div>$31.07</div>
+        <div>$31.07</div>
+        <div>$31.07</div>
+        <div>$31.07</div>
+        <div>$31.07</div>
+      </div>
       <div className="chart-container">
-        <div className="bar">
-          <div></div>
-          <p>mon</p>
-        </div>
-        <div className="bar">
-          <div></div>
-          <p>tue</p>
-        </div>
-        <div className="bar">
-          <div></div>
-          <p>wed</p>
-        </div>
-        <div className="bar">
-          <div></div>
-          <p>thu</p>
-        </div>
-        <div className="bar">
-          <div></div>
-          <p>fri</p>
-        </div>
-        <div className="bar">
-          <div></div>
-          <p>sat</p>
-        </div>
-        <div className="bar">
-          <div></div>
-          <p>sun</p>
-        </div>
+        {data.map((data) => {
+          return (
+            <div className="bar">
+              <div>&{data[0].amount}</div>
+              <p>mon</p>
+            </div>
+          );
+        })}
       </div>
       <div className="line"></div>
       <div className="spending-bottom">

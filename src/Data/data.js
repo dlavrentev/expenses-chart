@@ -28,3 +28,7 @@
     "amount": 25.48
   }
 ]
+
+export default data;
+
+
