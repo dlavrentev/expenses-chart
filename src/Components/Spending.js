@@ -1,20 +1,37 @@
-import React from "react";
+import React, { useState } from "react";
 import data from "./../Data/data.json";
 
 const Spending = () => {
+  const [isHovering, setisHovering] = useState(false);
+
+  const handleMouseEnter = () => {
+    setisHovering(false);
+  };
+
+  const handleMouseLeave = () => {
+    setisHovering(true);
+  };
+
   return (
     <div className="spending-container">
       <h1>Spending - Last 7 days</h1>
       <div className="chart-container">
         {data.map(({ id, day, amount }) => {
           return (
-            <div key={id} className="bar">
-              <div className={`detail-${id}`} key={id}>
+            <div className="bar">
+              <div
+                className={`detail ${isHovering ? "hidden" : "visible"}`}
+              >
                 ${amount}
               </div>
               <div
+                key={id}
                 className={`bars bar-${id}`}
-                style={{ height: `${(data[id - 1].amount / 52.36) * 150}px` }}
+                onMouseEnter={handleMouseEnter}
+                onMouseLeave={handleMouseLeave}
+                style={{
+                  height: `${(data[id - 1].amount / 52.36) * 150}px`,
+                }}
               ></div>
               <p>{day}</p>
             </div>
@@ -36,5 +53,4 @@ const Spending = () => {
   );
 };
 
-console.log(data);
 export default Spending;
