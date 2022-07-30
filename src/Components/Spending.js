@@ -4,8 +4,9 @@ import data from "./../Data/data.json";
 const Spending = () => {
   const [isHovering, setisHovering] = useState(false);
 
-  const handleMouseEnter = () => {
+  const handleMouseEnter = (e) => {
     setisHovering(false);
+    console.log(e)
   };
 
   const handleMouseLeave = () => {
@@ -26,7 +27,7 @@ const Spending = () => {
                 ${amount}
               </div>
               <div
-               
+                key={id}
                 className={`bars bar-${id}`}
                 onMouseEnter={handleMouseEnter}
                 onMouseLeave={handleMouseLeave}
@@ -53,6 +54,5 @@ const Spending = () => {
     </div>
   );
 };
-
 
 export default Spending;
