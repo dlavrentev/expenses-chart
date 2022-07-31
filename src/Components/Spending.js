@@ -5,8 +5,8 @@ const Spending = () => {
   const [isHovering, setisHovering] = useState(false);
 
   const handleMouseEnter = (e) => {
+    console.log(e.target.);
     setisHovering(false);
-    console.log(e)
   };
 
   const handleMouseLeave = () => {
