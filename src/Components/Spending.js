@@ -3,7 +3,7 @@ import data from "./../Data/data.json";
 
 const Spending = () => {
 
-  const [isHovering, setisHovering] = useState(false);
+  const [isHovering, setisHovering] = useState(true);
 
   const handleMouseEnter = (e) => {
     setisHovering(false);
