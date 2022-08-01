@@ -17,25 +17,28 @@ const Spending = () => {
     <div className="spending-container">
       <h1>Spending - Last 7 days</h1>
       <div className="chart-container">
-            <div className="bar" key={data.id}>
+        {data.map(({ id, day, amount }) => {
+          return (
+            <div className="bar" key={id}>
               <div
                 className={`detail`}
-                id={`${isHovering ? `hidden${data.id}` : `visible${id}`}`}
+                id={`${isHovering ? `hidden${id}` : `visible${id}`}`}
               >
-                ${data.amount}
+                ${amount}
               </div>
               <div
-                key={data.id}
-                className={`bars bar-${data.id}`}
+                key={id}
+                className={`bars bar-${id}`}
                 onMouseEnter={handleMouseEnter}
                 onMouseLeave={handleMouseLeave}
                 style={{
                   height: `${(data[id - 1].amount / 52.36) * 150}px`,
                 }}
               ></div>
-              <p>{data.day}</p>
+              <p>{day}</p>
             </div>
-          
+          );
+        })}
       </div>
       <div className="line"></div>
       <div className="spending-bottom">
