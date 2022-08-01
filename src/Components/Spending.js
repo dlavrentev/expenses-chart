@@ -5,7 +5,7 @@ const Spending = () => {
   const [isHovering, setisHovering] = useState(false);
 
   const handleMouseEnter = (e) => {
-    console.log(e.target.);
+    console.log(e.target);
     setisHovering(false);
   };
 
@@ -17,28 +17,25 @@ const Spending = () => {
     <div className="spending-container">
       <h1>Spending - Last 7 days</h1>
       <div className="chart-container">
-        {data.map(({ id, day, amount }) => {
-          return (
-            <div className="bar" key={id}>
+            <div className="bar" key={data.id}>
               <div
                 className={`detail`}
-                id={`${isHovering ? `hidden${id}` : `visible${id}`}`}
+                id={`${isHovering ? `hidden${data.id}` : `visible${id}`}`}
               >
-                ${amount}
+                ${data.amount}
               </div>
               <div
-                key={id}
-                className={`bars bar-${id}`}
+                key={data.id}
+                className={`bars bar-${data.id}`}
                 onMouseEnter={handleMouseEnter}
                 onMouseLeave={handleMouseLeave}
                 style={{
                   height: `${(data[id - 1].amount / 52.36) * 150}px`,
                 }}
               ></div>
-              <p>{day}</p>
+              <p>{data.day}</p>
             </div>
-          );
-        })}
+          
       </div>
       <div className="line"></div>
       <div className="spending-bottom">
