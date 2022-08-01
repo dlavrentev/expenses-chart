@@ -84,6 +84,70 @@
 
 /* Chart container */ 
 
+.chart-container {
+  position: absolute;
+  left: 2%;
+  right: 2%;
+  top: 25.42%;
+  bottom: 32.54%;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+}
+
+.bar {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.detail {
+  font-size: 11.5px;
+  background-color: #382314;
+  padding: 5px 5px;
+  margin-bottom: 10px;
+  border-radius: 8px;
+  color: white;
+  text-align: center;
+}
+
+#hidden1, #hidden2, #hidden3, #hidden4, #hidden5, #hidden6, #hidden7 {
+  visibility: hidden;
+}
+
+#visible1, #visible2, #visible3, #visible4, #visible5, #visible6, #visible7 {
+  visibility: visible;
+}
+
+
+
+
+.bars {
+  width: 33px;
+  border-radius: 3px;
+  background: #ec755d;
+}
+
+.bars:hover {
+  background: #FF9B86;
+}
+
+.bar-3 {
+  background-color: #76B5BC;
+}
+
+.bar-3:hover {
+  background: #B4E0E5;
+}
+
+.bar p {
+  color: #92857a;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 16px;
+  text-align: center;
+  margin-top: 11px;
+}
 .line {
   position: absolute;
   left: 5.83%;
