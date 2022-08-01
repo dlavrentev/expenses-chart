@@ -2,11 +2,12 @@ import React, { useState } from "react";
 import data from "./../Data/data.json";
 
 const Spending = () => {
+
   const [isHovering, setisHovering] = useState(false);
 
   const handleMouseEnter = (e) => {
-    console.log(e.target);
     setisHovering(false);
+    console.log(target.e)
   };
 
   const handleMouseLeave = () => {
@@ -21,6 +22,7 @@ const Spending = () => {
           return (
             <div className="bar" key={id}>
               <div
+                
                 className={`detail`}
                 id={`${isHovering ? `hidden${id}` : `visible${id}`}`}
               >
